@@ -1,8 +1,5 @@
 ## Introduction 
 
-[Play Tic Tac Toe](index2.html)
-
-
 Welcome to the Tic Tac Toe game! This is a web-based version of the classic Tic Tac Toe game where you can play against the computer or a friend.
 
 ## Features
