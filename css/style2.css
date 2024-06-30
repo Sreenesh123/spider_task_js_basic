@@ -1,0 +1,350 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  ;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    background-image: url("/bg3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #1f2624;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body::-webkit-scrollbar
+{
+    display: none;
+}
+.main::-webkit-scrollbar
+{
+    display: none;
+}
+
+.main {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    min-height: 70vh;
+    gap: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 6.25rem);
+    grid-template-rows: repeat(3, 6.25rem);
+    gap: 0.625rem;
+    background: #c0c0c0;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    background-image: url("/wood.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0.625rem rgba(0, 0, 0, 0.3), 0 0 0.625rem rgba(0, 0, 0, 0.2);
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.25rem;
+    height: 6.25rem;
+    background-color: rgba(224, 224, 224, 0.2);
+    border-radius: 0.313rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    font-size: 2.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+    background-color: rgba(12, 11, 11, 0.3);
+}
+
+.box.x, .box.o {
+    box-shadow: inset 0.125rem 0.125rem 0.625rem 0.25rem rgba(0, 0, 0, 0.3);
+}
+
+.player-1, .player-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url("/wood.jpg");
+    border-radius: 5%;
+    width: 200px;
+    height: 18.75rem;
+    margin: 0px;
+    transition: transform 0.3s;
+}
+
+.player.active {
+    transform: scale(1.2);
+}
+
+.player__symbol {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.game-restart-btn {
+    padding: 0.625rem 1.25rem;
+    margin-top: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 0.313rem;
+    transition: background-color 0.3s;
+}
+
+.game-restart-btn:hover {
+    background-color: #0056b3;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
+    background-color: #fff;
+    border: 0.125rem solid #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.625rem;
+}
+
+.popup.hide {
+    display: none;
+}
+
+.popup__restart-btn {
+    margin-top: 0.625rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 0.313rem;
+    transition: background-color 0.3s;
+}
+
+.popup__restart-btn:hover {
+    background-color: #0056b3;
+}
+
+.timer {
+    font-size: 1.5rem;
+    margin-top: 0.625rem;
+    font-weight: bold;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color:rgba(3, 62, 56, 0.8);
+    margin: 6.25rem auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    border: 0.063rem solid #888;
+    width: 21.875rem;
+    align-items: center;
+    min-height: 55%;
+    border-radius: 5%;
+    color:rgb(255, 255, 255);
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .grid-modal {
+    
+    margin: 6.25rem auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    border: 0.063rem solid #888;
+    align-items: center;
+    min-height: 70%;
+    border-radius: 5%;
+    color:rgb(255, 255, 255);
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+.hidden {
+  display: none;
+}
+
+#inputdata
+{
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+}
+#inputdata label{
+    margin:1.25rem
+}
+#welcome
+{
+    margin: 1.875rem;
+}
+#playerNames label
+{
+    font-size: 0.875rem;
+    margin:1.875rem;
+}
+.playerNames
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#difficulty
+{
+    margin-top: 1.875rem;
+}
+#gameSettingsForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1.875rem;
+}
+
+.grid-size img {
+  width: 12.5rem;
+  height: 12.5rem;
+  margin: 1.25rem;
+  transition: transform 0.3s ease; 
+}
+
+.grid-size img:hover {
+  transform: scale(1.1);
+}
+.grid-size
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2.5rem;
+    
+}
+#gridheading
+{
+    color: #fff;
+}
+.submit {
+    margin-top: 2em;
+ width: 9em;
+ height: 1.75em;
+ border-radius: 30em;
+ font-size: 0.938rem;
+ font-family: inherit;
+ border: none;
+ position: relative;
+ overflow: hidden;
+ z-index: 1;
+ 
+}
+
+.submit::before {
+ content: '';
+ width: 0;
+ height: 1.75em;
+ border-radius: 30em;
+ position: absolute;
+ top: 0;
+ left: 0;
+ background-image: linear-gradient(to right, #12686a 0%, #5aebee 100%);
+ transition: .5s ease;
+ display: block;
+ z-index: -1;
+}
+
+.submit:hover::before {
+ width: 9em;
+}
+
+@media (max-width:713px){
+    .grid-size
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2.5rem;
+    
+}
+    
+}
+
+     @media(max-width:924px)  {
+        .main{
+            flex-direction: column;
+            
+        }
+     }
+     @media screen and (max-width: 924px) {
+    .board {
+        gap: 3px;
+    }
+    .box {
+        width: 70px;
+        height: 70px;
+    }
+    .player.active{
+        margin: 30px;
+        transform: scale(0.9);
+    }
+    .game-restart-btn
+    {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+}

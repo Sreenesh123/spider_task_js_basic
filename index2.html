@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body style="background-image:url('bg3.jpg');">
+    <div class="main">
+        <div class="player player-1" style="background-image: url('wood.jpg');">
+            <h2>Player 1</h2>
+            <div class="player__symbol"><img src="media/x.png" alt=""></div>
+            <div class="timer" id="timer1">1.00</div>
+        </div>
+        <div class="game-container">
+            <div class="board-container">
+                <div class="board" style="background-image: url('wood.jpg');">
+                    <!-- Divs will be generated dynamically here -->
+                </div>
+            </div>
+        </div>
+        <div class="player player-2" style="background-image: url('wood.jpg');">
+            <h2>Player 2</h2>
+            <div class="player__symbol"><img src="media/o.png" alt=""></div>
+            <div class="timer" id="timer2">1.00</div>
+        </div>
+        
+        <div class="popup hide">
+            <p id="message">Sample Message</p>
+            <button class="popup__restart-btn">New Game</button>
+        </div>
+    </div>
+    <button class="game-restart-btn">Restart Game</button>
+
+    <div id="welcomeModal" class="modal">
+  <div class="modal-content">
+    <h2 id="welcome">WELCOME !!</h2>
+    <form id="gameSettingsForm">
+      <div id="inputdata">
+        <label>
+          <input type="radio" name="gameMode" value="single" required> Single Player
+        </label>
+         <div id="choosecoin">
+        <input type="radio" id="chooseX" name="symbol" value="X" required checked>
+<label for="chooseX"><img src="media/x.png" alt=""></label>
+<input type="radio" id="chooseO" name="symbol" value="O">
+<label for="chooseO"><img src="media/o.png" alt=""></label>
+
+      </div>
+        <label>
+          <input type="radio" name="gameMode" value="multi"> Multiplayer
+        </label>
+      </div>
+     
+      <div id="playerNames" class="hidden">
+        <label>
+          Player 1 : <input type="text" id="player1Name">
+        </label>
+        <label>
+          Player 2 : <input type="text" id="player2Name">
+        </label>
+      </div>
+     <button type="submit" class="submit">Start Game</button>
+    </form>
+     
+  </div>
+</div>
+
+
+<div id="gridsizemodal" class="modal">
+  <div class="grid-modal">
+    <h2>Select Grid Size</h2>
+    <div class="grid-size">
+      <img src="media/3.png" alt="3x3 Grid" id="3">
+      <img src="media/4.png" alt="4x4 Grid" id="4">
+      <img src="media/5.png" alt="5x5 Grid" id="5">
+    </div>
+  </div>
+</div>
+
+
+    
+
+    <script src="index2.js"></script>
+    
+</body>
+
+</html>
