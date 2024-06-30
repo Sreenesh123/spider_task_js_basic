@@ -1,5 +1,6 @@
 ## Introduction 
-[Play tic tac toe](https://sreenesh123.github.io/spider_task_js_basic/)
+[Play tic tac toe](https://sreenesh123.github.io/spider_task_js_basic/).
+
 Welcome to the Tic Tac Toe game! This is a web-based version of the classic Tic Tac Toe game where you can play against the computer or a friend.
 
 ## Features
