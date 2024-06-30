@@ -44,4 +44,4 @@ After choosing the game mode (singleplayer or multiplayer), you will be given th
 
 ![Game Board](Demo/Screenshot%20(852).png)
 
-![Grid](Demo/Screenshot%20(852).png)
+![Grid](Demo/Screenshot%20(851).png)
