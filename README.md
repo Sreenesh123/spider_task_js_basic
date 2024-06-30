@@ -34,14 +34,14 @@ After choosing the game mode (singleplayer or multiplayer), you will be given th
 
 ## Screenshots
 
-![Main Menu](Demo/Screenshot(848).png)
+![Main Menu](Demo/Screenshot%20(848).png)
 
 
-![Single Player Mode](Demo/Screenshot(849).png)
+![Single Player Mode](Demo/Screenshot%20(849).png)
 
 
-![Multiplayer Mode](Demo/Screenshot(850).png)
+![Multiplayer Mode](Demo/Screenshot%20(850).png)
 
-![Game Board](Demo/Screenshot(852).png)
+![Game Board](Demo/Screenshot%20(852).png)
 
-![Grid](Demo/Screenshot(852).png)
+![Grid](Demo/Screenshot%20(852).png)
